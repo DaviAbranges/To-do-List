@@ -1,7 +1,7 @@
 import TaskProvider from './context/TaskProvider'
 import { Route, Routes } from 'react-router-dom'
 import LoginPage from './screens/Login/Login'
-import Header from './components/Header/Header'
+import ToDoList from './screens/ToDoList/ToDoList'
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <TaskProvider>
         <Routes>
           <Route exact path='/' Component={LoginPage} />
-          <Route exact path='/ToDoList' Component={Header} />
+          <Route exact path='/ToDoList' Component={ToDoList} />
         </Routes>
       </TaskProvider>
     </>

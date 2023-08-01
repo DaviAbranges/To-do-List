@@ -1,0 +1,33 @@
+.logo{
+  height: 146px;
+  border-radius: 50%;
+}
+
+.perfilImage{
+  height: 98px;
+  border-radius: 50%;
+}
+
+.header{
+  display: flex;
+  justify-content: space-around;
+  max-height: 20vh;
+  min-height: 20vh;
+  align-items: center;
+}
+
+.perfil{
+  display: flex;
+  gap: 30px ;
+  align-items: center;
+  line-height: 1.5;
+  color: white;
+}
+
+.header{
+  background-color: rgba(29, 29, 29, 0.842);;
+  padding: 20px 0;
+  -webkit-box-shadow: 0px 10px 25px -19px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 25px -19px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 25px -19px rgba(0,0,0,0.75);
+}

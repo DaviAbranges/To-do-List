@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import './ToDoList.css';
 import TaskContext from '../../context/TaskContext';
+import Table from '../../components/Table/Table';
 
 export default function ToDoList() {
   const navigate = useNavigate();
@@ -31,6 +32,7 @@ export default function ToDoList() {
         <div className="buttons">
           <button onClick={handlerAddTask}>Add Task</button>
         </div>
+        <Table />
       </div>
     </div>
   );

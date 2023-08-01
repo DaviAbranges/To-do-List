@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.addTask{
+  height: 100vh;
+  background-color: #b6d0a0;
+}
+
+.containerAddTask {
+  background-color: #f9e5c0;
+  display: flex;
+  width: 80%;
+  margin: 40px auto;
+  border-radius: 10px;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+} 
+
+.containerAddTask form{
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  align-items: center;
+}
+.containerAddTask form input{
+  margin-right: 40px;
+  padding: 10px;
+  border-radius: 15px;
+  margin-left: 10px;
+  border: none;
+  border: 1px solid black;
+  outline: none;
+}
+
+.containerAddTask form select{
+  padding: 10px;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  margin-right: 40px;
+  border: 1px solid black;
+}
+
+.containerAddTask form span{
+  color: black;
+  font-weight: 400;
+}
+
+.containerAddTask form label {
+  color: black;
+  font-weight: 400
+
+}
+
+.containerAddTask form textarea{
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  margin-left: 10px;
+  margin-right: 40px;
+  resize: none;
+  border: 1px solid black;
+}
+
+.label{
+  margin-right: 10px;
+}
+
+.buttonsAddTask :first-child{
+  padding: 20px;
+  width: 150px;
+  border: none;
+  border-radius: 7px;
+  margin-right: 8px;
+  background-color: green;
+  cursor: pointer;
+
+}
+
+.buttonsAddTask :last-child{
+  padding: 20px;
+  background-color: red;
+  width: 150px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}

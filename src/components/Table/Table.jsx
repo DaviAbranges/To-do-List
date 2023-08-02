@@ -2,6 +2,8 @@ import { useContext } from 'react';
 import './Table.css';
 import { useNavigate } from 'react-router-dom';
 import TaskContext from '../../context/TaskContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 export default function Table() {
   const { todoList, setFormData, setTodoList } = useContext(TaskContext);
@@ -45,13 +47,13 @@ export default function Table() {
               {' '}
               {task.time}
             </td>
-            <td>{task.priority}</td>
-            <td><button onClick={() => handlerEdit(task)}>edit</button></td>
-            <td><button onClick={() => handlerDelete(task)}>Delete</button></td>
+            <td className={task.priority === 'Medium' ? 'yellow' : task.priority === 'High' ? 'red' : 'green'}>{task.priority}</td>
+            <td><button onClick={() => handlerEdit(task)}><FontAwesomeIcon icon={faEdit} /></button></td>
+            <td><button onClick={() => handlerDelete(task)}><FontAwesomeIcon icon={faTrash} /></button></td>
           </tr>
         ))}
 
       </tbody>
-    </table>
+    </table >
   );
 }

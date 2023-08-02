@@ -13,6 +13,8 @@ function TaskProvider({ children }) {
   });
   const [todoList, setTodoList] = useState([]);
   const [nextTaskId, setNextTaskId] = useState(1);
+  const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
   const value = useMemo(() => ({
     formData,
     setFormData,
@@ -20,7 +22,11 @@ function TaskProvider({ children }) {
     setTodoList,
     nextTaskId,
     setNextTaskId,
-  }), [formData, todoList, nextTaskId]);
+    email,
+    setEmail,
+    name,
+    setName
+  }), [formData, todoList, nextTaskId, email, name]);
 
   return (
     <TaskContext.Provider value={value}>

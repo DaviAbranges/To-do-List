@@ -29,9 +29,7 @@ export default function ToDoList() {
       <Header />
       <div className="to-doListContainer">
         <h1>To-Do List</h1>
-        <div className="buttons">
-          <button onClick={handlerAddTask}>Add Task</button>
-        </div>
+        <button onClick={handlerAddTask} className='button'>Add Task</button>
         <Table />
       </div>
     </div>

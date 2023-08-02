@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css'
+import TaskContext from '../../context/TaskContext';
 function LoginPage() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
   const [isButtonClickable, setIsButtonClickable] = useState(false);
+  const [password, setPassword] = useState('')
+  const { email, setEmail, setName } = useContext(TaskContext)
+
+  const handleNameChange = (event) => {
+    setName(event.target.value)
+  }
 
   const validateEmailAndPassword = () => {
     const isValidEmail = /\S+@\S+\.\S+/.test(email);
@@ -29,10 +34,15 @@ function LoginPage() {
     }
   };
 
+
   return (
-    <div className="loginPage">
+    < div className="loginPage" >
       <div className="loginContainer">
+        <h1>TO DO LIST</h1>
         <div className="loginInputs">
+          <label htmlFor='name'>
+            <input type="text" placeholder='name' className='inputLogin' onChange={handleNameChange} />
+          </label>
           <label htmlFor="email">
             <input
               type="text"
@@ -55,12 +65,13 @@ function LoginPage() {
           </label>
         </div>
         <div className="loginButtons">
-          <button className="loginButton" onClick={handleLogin} disabled={!isButtonClickable}>
+          <button className={`loginButton ${isButtonClickable ? 'buttonEnabled' : 'buttonDisabled'}`}
+            onClick={handleLogin} disabled={!isButtonClickable} >
             Entrar
           </button>
         </div>
       </div>
-    </div>
+    </div >
 
   );
 }

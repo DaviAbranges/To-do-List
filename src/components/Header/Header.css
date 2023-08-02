@@ -1,18 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 .logo{
   height: 146px;
   border-radius: 50%;
 }
 
-.perfilImage{
-  height: 98px;
-  border-radius: 50%;
-}
 
 .header{
   display: flex;
   justify-content: space-around;
-  max-height: 20vh;
-  min-height: 20vh;
+  max-height: 18vh;
+  min-height: 18vh;
   align-items: center;
 }
 
@@ -22,12 +20,80 @@
   align-items: center;
   line-height: 1.5;
   color: white;
+  font-size: 20px;
 }
 
+
 .header{
-  background-color: rgba(29, 29, 29, 0.842);;
+  background-color: rgb(8, 6, 6);
   padding: 20px 0;
   -webkit-box-shadow: 0px 10px 25px -19px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 10px 25px -19px rgba(0,0,0,0.75);
   box-shadow: 0px 10px 25px -19px rgba(0,0,0,0.75);
+}
+
+.perfil input[type="file"] {
+  display: none;
+}
+
+.perfilImageContainer {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: rgb(70, 70, 70);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.perfilImageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.perfilImageContainer span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #555;
+}
+
+.perfil .datasPerfil {
+  margin-top: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.perfil .datasPerfil :last-child{
+  color: rgb(107, 107, 107);
+}
+
+.perfil input[type="file"] + .perfilImageContainer:hover {
+  background-color: #ddd;
+}
+
+.perfil input[type="file"] + .perfilImageContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  pointer-events: none;
+}
+
+.perfil input[type="file"]:focus + .perfilImageContainer::before {
+  background-color: rgba(255, 255, 255, 0.8);
 }

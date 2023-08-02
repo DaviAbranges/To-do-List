@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 .table{
   background-color: white;
-  width: 90%;
+  width: 85%;
   height: auto;
   border-radius: 10px;
   padding-top: 40px;
@@ -15,9 +15,31 @@ thead th {
   font-weight: 700;
   font-size: 18px;
 }
+head th {
+  text-align: center; /* Centraliza o conteúdo do cabeçalho */
+}
 
-tbody th{
-  font-size: 16px;
-  font-family: 'Roboto', sans-serif;
-  font-weight:400;
+tbody td {
+  text-align: center; /* Centraliza o conteúdo das células do corpo da tabela */
+}
+.yellow{
+  color: rgb(255, 115, 0);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.green{
+  color: green;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.red{
+  color: red;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+tbody tr {
+  font-size: 18px;
 }

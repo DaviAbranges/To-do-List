@@ -9,19 +9,20 @@
 
 .addTask{
   height: 100vh;
-  background-color: #b6d0a0;
+  background-color: #1c1c1c;
 }
 
 .containerAddTask {
-  background-color: #f9e5c0;
+  background-color: #0e0e0e;
   display: flex;
-  width: 80%;
+  width: 75%;
   margin: 40px auto;
   border-radius: 10px;
   height: 70vh;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+
 } 
 
 .containerAddTask form{
@@ -53,14 +54,15 @@
 }
 
 .containerAddTask form span{
-  color: black;
+  color: white;
   font-weight: 400;
+  font-size:  20px;
 }
 
 .containerAddTask form label {
-  color: black;
-  font-weight: 400
-
+  color: white;
+  font-weight: 400;
+  font-size:  20px;
 }
 
 .containerAddTask form textarea{
@@ -84,14 +86,14 @@
   border: none;
   border-radius: 7px;
   margin-right: 8px;
-  background-color: green;
+  background-color: rgb(72, 192, 72);
   cursor: pointer;
 
 }
 
 .buttonsAddTask :last-child{
   padding: 20px;
-  background-color: red;
+  background-color: rgb(184, 42, 42);
   width: 150px;
   border: none;
   border-radius: 7px;

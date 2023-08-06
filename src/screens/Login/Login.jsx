@@ -5,11 +5,12 @@ import TaskContext from '../../context/TaskContext';
 function LoginPage() {
   const [isButtonClickable, setIsButtonClickable] = useState(false);
   const [password, setPassword] = useState('')
-  const { email, setEmail, setName } = useContext(TaskContext)
+  const { email, setEmail, setName, name } = useContext(TaskContext)
 
   const handleNameChange = (event) => {
     setName(event.target.value)
   }
+
 
   const validateEmailAndPassword = () => {
     const isValidEmail = /\S+@\S+\.\S+/.test(email);
@@ -31,6 +32,10 @@ function LoginPage() {
   const handleLogin = () => {
     if (isButtonClickable) {
       navigate('/ToDoList')
+    }
+    if (email && name) {
+      localStorage.setItem('email', email);
+      localStorage.setItem('name', name);
     }
   };
 

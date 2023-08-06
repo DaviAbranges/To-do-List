@@ -6,7 +6,6 @@ import './Header.css';
 export default function Header() {
   const [profileImage, setProfileImage] = useState(null);
   const { name, email } = useContext(TaskContext);
-
   const handleProfileImageChange = (event) => {
     const file = event.target.files[0];
 
@@ -37,6 +36,7 @@ export default function Header() {
         <div className="datasPerfil">
           <p>{name}</p>
           <p>{email}</p>
+          <button onClick={() => localStorage.removeItem('email')}>Sair</button>
         </div>
       </label>
     </div>

@@ -16,11 +16,11 @@ thead th {
   font-size: 18px;
 }
 head th {
-  text-align: center; /* Centraliza o conteúdo do cabeçalho */
+  text-align: center;
 }
 
 tbody td {
-  text-align: center; /* Centraliza o conteúdo das células do corpo da tabela */
+  text-align: start;
 }
 .yellow{
   color: rgb(255, 115, 0);

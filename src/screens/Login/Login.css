@@ -47,7 +47,6 @@
 
 .inputLogin:focus{
   border: #000000 1px solid;
-  font-size: 10px;
 }
 .inputLogin::placeholder{
   color: rgba(0, 0, 0, 0.541);
@@ -74,7 +73,7 @@
 }
 
 .buttonEnabled{
-  background-color: rgb(156, 153, 153);
+  background-color:white;
   
 }
 
@@ -85,7 +84,7 @@
 }
 
 .buttonDisabled{
-  background-color: white;
+  background-color: rgb(156, 153, 153);
 }
 
 .loginButton:hover{

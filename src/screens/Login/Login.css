@@ -109,6 +109,7 @@
     justify-content: center;
     gap: 50px;
     border-radius: 10px;
+    touch-action: none;
   }
   
   .inputLogin {
@@ -119,7 +120,5 @@
     outline: none;
     border: 1px solid rgb(66, 66, 66);
     touch-action: none;
-    background-color: red;
-
   }
 }

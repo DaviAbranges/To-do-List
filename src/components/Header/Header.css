@@ -74,6 +74,19 @@
   color: rgb(107, 107, 107);
 }
 
+.logout{
+  background-color: rgb(184, 42, 42);
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+
+.logout:hover{
+  cursor: pointer;
+  background-color: rgb(202, 59, 59);
+}
+
 .perfil input[type="file"] + .perfilImageContainer:hover {
   background-color: #ddd;
 }

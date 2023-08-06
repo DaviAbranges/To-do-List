@@ -2,27 +2,37 @@ import { useState, useContext } from 'react';
 import TaskContext from '../../context/TaskContext';
 import logo from '../../images/logo.png';
 import './Header.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
-  const [profileImage, setProfileImage] = useState(null);
   const { name, email } = useContext(TaskContext);
+  const [localStorageImage, setLocalStorageImage] = useState(localStorage.getItem('profileImage'));
+
   const handleProfileImageChange = (event) => {
     const file = event.target.files[0];
 
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setProfileImage(reader.result);
+        localStorage.setItem('profileImage', reader.result);
+        setLocalStorageImage(reader.result);
       };
       reader.readAsDataURL(file);
     } else {
-      setProfileImage(null);
+      localStorage.removeItem('profileImage');
+      setLocalStorageImage(null);
     }
+  };
+
+  const navigate = useNavigate();
+  const handlerLogout = () => {
+    localStorage.clear();
+    navigate('/login');
   };
 
   return (
     <div className="header">
-      <img src={logo} alt="" className="logo" />
+      <img src={logo} alt="Logo" className="logo" />
       <label htmlFor="profileInput" className="perfil">
         <input
           type="file"
@@ -31,12 +41,18 @@ export default function Header() {
           onChange={handleProfileImageChange}
         />
         <div className="perfilImageContainer">
-          {profileImage ? <img src={profileImage} alt="Perfil" className="perfilImage" /> : <span>+</span>}
+          {localStorageImage ? (
+            <img src={localStorageImage} alt="Perfil" className="perfilImage" />
+          ) : (
+            <span>+</span>
+          )}
         </div>
         <div className="datasPerfil">
           <p>{name}</p>
           <p>{email}</p>
-          <button onClick={() => localStorage.removeItem('email')}>Sair</button>
+          <div>
+            <button onClick={handlerLogout} className='logout'>Logout</button>
+          </div>
         </div>
       </label>
     </div>

@@ -27,11 +27,11 @@ export default function Table() {
     <table className="table">
       <thead>
         <tr>
-          <th>Task</th>
-          <th>Description</th>
-          <th>Category</th>
-          <th>When</th>
-          <th>Priority</th>
+          <th>Task|</th>
+          <th>Description|</th>
+          <th>Category|</th>
+          <th>When|</th>
+          <th>Priority|</th>
         </tr>
       </thead>
       <tbody>

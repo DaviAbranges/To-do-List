@@ -79,7 +79,7 @@
   padding: 8px;
   border: none;
   border-radius: 10px;
-  color: white;
+  color: white !important;
 }
 
 .logout:hover{
@@ -109,4 +109,24 @@
 
 .perfil input[type="file"]:focus + .perfilImageContainer::before {
   background-color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 675px){
+  .logo{
+    height: 0px;
+    border-radius: 50%;
+  }
+
+.perfilImageContainer {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(70, 70, 70);
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
 }

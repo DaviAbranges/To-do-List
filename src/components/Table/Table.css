@@ -43,3 +43,15 @@ tbody td {
 tbody tr {
   font-size: 18px;
 }
+
+
+@media screen and (max-width: 675px){
+  .table{
+    background-color: white;
+    width: 118%;
+    height: auto;
+    border-radius: 10px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+}

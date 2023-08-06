@@ -50,3 +50,17 @@
   color: black;
   cursor: pointer;
 }
+
+@media screen and (max-width: 675px){
+  .to-doListContainer{
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 40px auto;
+    border-radius: 10px;
+    height: 70vh;
+    /* justify-content: center; */
+    align-items: center;
+  }
+}

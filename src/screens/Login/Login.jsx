@@ -38,7 +38,7 @@ function LoginPage() {
       localStorage.setItem('name', name);
     }
   };
-
+  const maxLength = 15;
 
   return (
     < div className="loginPage" >
@@ -46,7 +46,7 @@ function LoginPage() {
         <h1>TO DO LIST</h1>
         <div className="loginInputs">
           <label htmlFor='name'>
-            <input type="text" placeholder='name' className='inputLogin' onChange={handleNameChange} />
+            <input type="text" placeholder='name' className='inputLogin' onChange={handleNameChange} maxLength={maxLength} />
           </label>
           <label htmlFor="email">
             <input

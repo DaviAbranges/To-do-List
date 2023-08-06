@@ -1,13 +1,20 @@
-import { useState, useContext } from 'react';
-import TaskContext from '../../context/TaskContext';
+import { useState } from 'react';
+// import TaskContext from '../../context/TaskContext';
 import logo from '../../images/logo.png';
 import './Header.css';
 import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
-  const { name, email } = useContext(TaskContext);
+  const name = localStorage.getItem('name')
+  const email = localStorage.getItem('email')
   const [localStorageImage, setLocalStorageImage] = useState(localStorage.getItem('profileImage'));
 
+  const limitEmailLength = (email) => {
+    if (email.length > 10) {
+      return email.substring(0, 15) + '...';
+    }
+    return email;
+  };
   const handleProfileImageChange = (event) => {
     const file = event.target.files[0];
 
@@ -49,7 +56,7 @@ export default function Header() {
         </div>
         <div className="datasPerfil">
           <p>{name}</p>
-          <p>{email}</p>
+          <p>{limitEmailLength(email)}</p>
           <div>
             <button onClick={handlerLogout} className='logout'>Logout</button>
           </div>
